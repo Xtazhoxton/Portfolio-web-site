@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="script.js"></script>
+    <title>Portofolio Website</title>
+</head>
+<body>
+    <header>
+        <h1>Personnal Portfolio Website</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#about">Aboute me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Aboute me</h2>
+        <p>Passionné par les nouvelles technologies et actuellement en quatrième année d’ingénierie en Informatique et Systèmes d’Information à l'Université de Technologie de Troyes, je suis en quête d’un stage de six mois à partir du second semestre 2025.
+            <br><br>
+            Durant mon parcours académique, j’ai acquis une solide expertise en conception logicielle, développement web et cloud computing. J’ai travaillé sur divers projets, allant de la création d’un site de streaming musical en React et Docker à l’analyse et la génération de fichiers GIFT pour Moodle en JavaScript. Mon expérience m'a également permis d'explorer le DevOps, avec des compétences en Docker, Kubernetes, AWS, bases de données SQL/NoSQL et scripting sous Linux.
+            <br><br>
+            Mon objectif professionnel est d’évoluer dans l’industrie du jeu vidéo, en me spécialisant dans la mise en place de services cloud pour les jeux en ligne. Fort d’une approche pragmatique et curieuse, je développe également des projets DevOps en autodidacte afin d’approfondir mes compétences en architecture logicielle et en développement backend.
+            <br><br>
+            Je suis à la recherche d’opportunités qui me permettront d’appliquer mes compétences dans un contexte concret et d’acquérir une expérience significative en développement logiciel et infrastructure cloud.</p>
+            <br><br>
+        </section>
+
+     <section id="projects">
+         <h2>Projects</h2>
+         <div class="project 1">
+             <h3>Site de streaming de music (EchoStream)</h3>
+             <p>Lors de ce projet nous avons conceptionner une application web de streaming musical avec une approche d'éco conception logiciel. ous avons utlisé react et docker pour faire cet application, gitAction pour mettre en place une chaîne CI/CD pour automatiser les tests sur la plateforme greenFrame et tester à chaque push l'impact écologique de notre application
+                <br>
+                Ce projet a été réalisé dans une démarche AGILE, nous avons aussi du écrire toute la documentation liée à notre site et le rapport liée à notre démarche d'éco conception pour premièrement montrer l'impact réel de l'application conu et deuxièment montrer les moyens mis en place pour réduire cet impact, pourquoi les solutons choisis sont efficaces et les possibles améliorations dans le futur
+             </p>
+             <br>
+        </div>
+        <div class="project 2">
+             <h3>Application JavaScript pour la lecture écriture de fchier .GIFT</h3>
+             <p>
+                Ce projet étudiant avait pour but de nous former à developper un logiciel depuis la phase de spécification, au développement puis à la phase finale de debugage et d'amélioration.
+                <br>
+                Nous avons utilisé JavaScript pour le développement de notre application. Nous avons aussi utilisé Node.js et NPM pour gérer les dépendances et le développement. Nous avons utilisé CaporalCli pour créer une interface client dans le terminal JavaScript. Nous avons également utilisé le module fs pour la lecture des fichiers.GIFT.
+             </p>
+             <br>
+        </div>
+        <div class="project 3">
+             <h3>Déployement d'une application web via AWS (badge AWS)</h3>
+             <p>
+                Dans le cadre d'un projet étudiant, on nous a demandé de validé le badge AWS sur le déploiement d'une application web hautement dsponible, sécrisé et scalable.
+                <br>
+                Concretement, j'ai créer un VPC AWS et configurer celle ci pour avoir des isnstances EC2 disponibles dans deux zones de disponibilité différentes avec un auto-scaling et un load balancer pour assurer la disponibilité et la scalabilité. J'ai aussi utilisé AWS secret manager avec la database RDS de AWS pour assurer la securité des informations sensibles stockés par l'applcation.
+                <br>
+                Ce badge requiert en plus la conception de l'architecture nécessaire pour réaliser ce déploiement en amont et une estimation des coûts. J'ai donc eu l'oaccasion de discter de ces sujets là directement avec le corps enseignat de mon école.
+             </p>
+             <br>
+            </div>
+            <div class="project 4">
+             
+             <h3>Création d'n escape game semi-numérique</h3>
+             <p>
+                Au cours d'une matière nous avons eu pour problématique d'essayer de résoudre un problème d'accecessibilité liée au développement durable. Nous avons choisi le domaine de l'éducation en créeant un escape game interactif pour proposer une solution  aux problèmes de concentration chez les plus jeunes et pour leurs apprendre à utiliser le numérique de manière pédagogique.
+                <br>
+                Ce projet a été réalisé avec des matériaux récupérer, une tablette avec une application android réalisé sur MIT App inventor et un esp32 pour controler certains capteurs ou mécanismes prévu par le jeu. Nous avons pu discuter avec des intervenants sur des questions de design, IHM et sur la multi-sensioralité.
+            </p>
+            </div>
+    </section>
+
+    <section id="skills">
+        
+        <img class="skill" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+          
+    </section>
+</body>
+</html>
