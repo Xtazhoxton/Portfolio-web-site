@@ -1,12 +1,31 @@
 body {
-    margin-left: 15%;
-    margin-right: 15%;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #c3c1c0;
 }
 
 header {
     display: flex;
-    width: 100%;
+    width: auto;
+    padding-left: 15%;
+    padding-right: 15%;
     justify-content: space-between;
+    background-color: #272d29;
+}
+
+.main{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+h1 {
+    color: #e9e8e9
+}
+
+a{
+    color: #e9e8e9;
+    text-decoration: none;
 }
 
 nav {
@@ -24,7 +43,65 @@ li {
 
 }
 
+#about{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2%;
+    border-radius: 16px;
+}
+
+#projects{
+    background-color: #736e6e;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.project{
+    background-color: #c3c1c0;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#skills{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 16px;
+    padding: 8px;
+}
 .skill{
-    height: 120px;
-    width: 120px;
+    
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.skill:hover{
+    animation-name: grow;
+    animation-duration: 0.7s;
+
+}
+
+@keyframes grow{
+    from{
+        width: 100px;
+        height: 100px;
+    }
+    to{
+        width: 150px;
+        height: 150px;
+        background-color: #272d29;
+    }
+}
+
+img.skill{
+    padding: 8px;
+}
+
+footer{
+    background-color: #272d29;
+    display: flex;
+    justify-content: center;
+    color: #e9e8e9;
+    width: auto;
 }
