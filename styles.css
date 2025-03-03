@@ -1,8 +1,25 @@
+:root{
+    --base-color: #c3c1c0;
+    --head-color: #272d29;
+    --headtext-color: #e9e8e9;
+    --section-color: #736e6e;
+    --text-color: black;
+}
+
+.lightmode{
+    --base-color: #E3FDFD;
+    --head-color: #71C9CE;
+    --headtext-color: #e9e8e9;
+    --section-color: #A6E3E9;
+    --text-color: black;
+}
+
 body {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #c3c1c0;
+    background-color: var(--base-color);
+    color: var(--text-color);
 }
 
 header {
@@ -11,20 +28,48 @@ header {
     padding-left: 15%;
     padding-right: 15%;
     justify-content: space-between;
-    background-color: #272d29;
+    background-color: var(--head-color);
 }
 
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--section-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+
+#theme-switch svg {
+    fill: var(--base-color);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+.lightmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.lightmode #theme-switch svg:last-child{
+    display: block;
+}
 .main{
     margin-left: 15%;
     margin-right: 15%;
 }
 
 h1 {
-    color: #e9e8e9
+    color: var(--headtext-color);
 }
 
 a{
-    color: #e9e8e9;
+    color: var(--headtext-color);
     text-decoration: none;
 }
 
@@ -40,6 +85,7 @@ nav {
 
 li {
     padding-left: 30px;
+    align-self: center;
 
 }
 
@@ -50,25 +96,28 @@ li {
 }
 
 #projects{
-    background-color: #736e6e;
+    background-color: var(--section-color);
     border-radius: 16px;
     padding: 8px;
 }
 
 .project{
-    background-color: #c3c1c0;
+    background-color: var(--base-color);
     padding: 8px;
     border-radius: 8px;
     margin: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#skills{
+
+#skills {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 16px;
     padding: 8px;
+    text-align: center;
+    margin-bottom: 100px; /* Espace supplémentaire pour l'affichage des niveaux */
 }
-.skill{
-    
+
+.skill{ 
     height: 100px;
     width: 100px;
     margin: 10px;
@@ -76,32 +125,85 @@ li {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
-.skill:hover{
-    animation-name: grow;
-    animation-duration: 0.7s;
 
+.skill-container {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
 }
 
-@keyframes grow{
-    from{
+.skill-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.skill-level {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #272d29;
+    color: var(--headtext-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    z-index: 10;
+}
+
+.skill-container:hover .skill-level {
+    opacity: 1;
+}
+
+.skill-name {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #58b368;
+    border-radius: 5px;
+}
+
+/* Modifier l'animation existante pour tenir compte du nouveau conteneur */
+.skill-container:hover .skill {
+    animation-name: grow;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+/* Ajuster l'animation pour ne pas interférer avec l'affichage du niveau */
+@keyframes grow {
+    from {
         width: 100px;
         height: 100px;
     }
-    to{
-        width: 150px;
-        height: 150px;
-        background-color: #272d29;
+    to {
+        width: 120px;
+        height: 120px;
+        background-color: var(--head-color);
     }
 }
 
-img.skill{
-    padding: 8px;
-}
-
 footer{
-    background-color: #272d29;
+    background-color: var(--head-color);
     display: flex;
     justify-content: center;
+    width: 100%;
     color: #e9e8e9;
     width: auto;
 }
