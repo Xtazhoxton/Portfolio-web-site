@@ -113,8 +113,8 @@ li {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 16px;
     padding: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     margin-bottom: 100px; /* Espace supplémentaire pour l'affichage des niveaux */
 }
@@ -208,4 +208,16 @@ footer{
     width: 100%;
     color: #e9e8e9;
     width: auto;
+}
+
+@media screen and (max-width: 1312px) {
+    #theme-switch {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 1021px) {
+    #theme-switch {
+        top: 70px;
+    }
 }
